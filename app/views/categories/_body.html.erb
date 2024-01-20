@@ -1,0 +1,24 @@
+<div class="categories">
+<% @categories.each_with_index do |cat, index|%>
+  <%= link_to category_payments_path(cat) do %>
+    <div class="category card mb-3">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <%= cat.icon %>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body text-dark">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title"><%= cat.name %></h5>
+              <strong>$<%= cat.payments.sum(:amount) %></strong>
+            </div>
+            <div>
+              <p class="card-text text-left"><%= cat.created_at.strftime("%d %B %Y") %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% end %>
+</div>

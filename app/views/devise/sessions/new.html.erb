@@ -1,0 +1,33 @@
+<section style="margin-top: -50px">
+  <div class="container py-5 h-100">
+    <div class="row d-flex h-100">
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          <div class="d-flex align-items-center justify-content-between bg-primary bg-gradient" style="width: 100%; height: 3rem; margin-bottom: 50px;">
+          <%= link_to "Back", "javascript:history.back()", class: "btn btn-outline-primary text-white" %>
+            <h2 class="text-white text-sm">Login</h2>
+
+            <div class="actions">
+              <%= f.submit "Log in", class: "btn btn-outline-primary btn-lg btn-block text-white" %>
+            </div>
+
+          </div>
+
+          <div class="field form-outline mb-4">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Enter your Email', class: "form-control form-control-lg" %>
+          </div>
+
+          <div class="form-outline mb-4">
+            <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Enter your password', class: "form-control form-control-lg" %>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "devise/shared/links" %>

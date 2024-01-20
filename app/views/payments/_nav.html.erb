@@ -1,0 +1,5 @@
+<div class="d-flex justify-content-between" style="margin-bottom: 10px">
+  <%= button_to "Back", categories_path, method: :get, class: "btn btn-primary" %>
+  <h3><%= @category.name %> Transactions</h3>
+  <strong>$<%= @payments.sum(:amount) %></strong>
+</div>
