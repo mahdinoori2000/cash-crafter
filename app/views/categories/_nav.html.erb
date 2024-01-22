@@ -1,4 +1,7 @@
-<div class="d-flex justify-content-between" style="margin-bottom: 10px; padding: 0px 20px;">
-  <h3>All Categories</h3>
-  <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "btn btn-primary" %>
+<div class="category-nav d-flex justify-content-between" style="margin-bottom: 10px; padding: 0px 20px;">
+<%= image_tag("humburger-menu.svg", alt: "Menu", class: "hum-icon") %>
+  <h3 class="text-white">CATEGORIES</h3>
+  <%= button_to destroy_user_session_path, method: :delete, class: "sign-out-btn" do %>
+    <%= image_tag("logout.svg", alt: "Sign Out", class: "sign-out-icon") %>
+  <% end %>
 </div>
