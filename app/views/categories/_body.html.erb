@@ -2,11 +2,11 @@
   <% @categories.each_with_index do |cat, index|%>
     <%= link_to category_payments_path(cat) do %>
       <secion class="category card mb-3">
-          <div class="category-icon" style="text-decoration: none;">
+          <div class="category-icon underline" style="font-size: 2.5em;">
             <%= cat.icon %>
           </div>
           <div class="category-details">
-            <h5 class="card-title"><%= cat.name %></h5>
+            <h5 class="category-card-title underline"><%= cat.name%></h5>
             <p class="card-text text-left"><%= cat.created_at.strftime("%d %B %Y") %></p>
           </div>
           <div>

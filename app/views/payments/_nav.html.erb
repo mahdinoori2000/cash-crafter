@@ -1,5 +1,7 @@
-<div class="d-flex justify-content-between align-items-center" style="margin-bottom: 10px; padding: 0px 20px;">
-  <%= button_to "Back", categories_path, method: :get, class: "btn btn-primary" %>
-  <h3 class="transaction_name"><%= @category.name %> Transactions</h3>
-  <strong>$<%= @payments.sum(:amount) %></strong>
+<div class="category-nav d-flex justify-content-between align-items-center" style="margin-bottom: 10px; padding: 0px 20px;">
+  <%= button_to categories_path, method: :get, class: "sign-out-btn" do %>
+    <%= image_tag("back-icon.svg", alt: "Back", class: "sign-out-icon") %>
+  <% end %>
+  <h3 class="transaction_name text-white">TRANSACTIONS</h3>
+  <strong class="text-white">$<%= @payments.sum(:amount) %></strong>
 </div>
