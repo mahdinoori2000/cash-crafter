@@ -5,5 +5,5 @@ class Payment < ApplicationRecord
 
   validates :name, presence: true
   validates :amount, presence: true
-  validates :author_id, presence: true 
+  validates :author_id, presence: true
 end

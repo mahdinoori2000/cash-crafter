@@ -21,7 +21,7 @@ class CategoriesController < ApplicationController
       ['🏠', '🏠'],
       ['🍕', '🍕'],
       ['🏥', '🏥'],
-      ['🎓', '🎓'],
+      ['🎓', '🎓']
     ]
   end
 

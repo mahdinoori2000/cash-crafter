@@ -11,8 +11,8 @@ RSpec.feature 'Payment page', type: :feature do
 
       @payment1 = Payment.create(name: 'jaan', amount: 50, author_id: @user.id)
       @payment2 = Payment.create(name: 'khaan', amount: 70, author_id: @user.id)
-      @CategoryPayment = CategoryPayment.create(category_id: @category1.id, payment_id: @payment1.id)
-      @CategoryPayment = CategoryPayment.create(category_id: @category1.id, payment_id: @payment2.id)
+      @category_payment = CategoryPayment.create(category_id: @category1.id, payment_id: @payment1.id)
+      @category_payment = CategoryPayment.create(category_id: @category1.id, payment_id: @payment2.id)
 
       visit "/categories/#{@category1.id}/payment"
     end
@@ -22,9 +22,9 @@ RSpec.feature 'Payment page', type: :feature do
     end
     it 'shows payments for a category' do
       expect(page).to have_content(@category1.name)
-      expect(page).to have_content("#{@payment1.name}")
+      expect(page).to have_content(@payment1.name.to_s)
       expect(page).to have_content("$#{@payment1.amount}")
-      expect(page).to have_content("#{@payment2.name}")
+      expect(page).to have_content(@payment2.name.to_s)
       expect(page).to have_content("$#{@payment2.amount}")
     end
   end

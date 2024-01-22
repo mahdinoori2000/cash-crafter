@@ -7,7 +7,7 @@ gem 'rails', '~> 7.1.1'
 gem 'sassc-rails', '~> 2.1'
 # Gem Tailwind CSS
 # Font Awesome icons
-gem "font-awesome-sass", "~> 6.4.2"
+gem 'font-awesome-sass', '~> 6.4.2'
 # Gem Devise
 gem 'devise'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
@@ -52,8 +52,8 @@ gem 'bootsnap', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows]
-  gem 'rspec-rails'
   gem 'factory_bot_rails'
+  gem 'rspec-rails'
 end
 
 group :development do

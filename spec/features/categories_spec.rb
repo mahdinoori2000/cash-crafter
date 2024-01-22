@@ -14,9 +14,9 @@ RSpec.feature 'Categories Page', type: :feature do
 
     it 'should only show the title icon' do
       expect(page).to have_content('Sign Out')
-      expect(page).to have_content("#{@category2.name}")
+      expect(page).to have_content(@category2.name.to_s)
       expect(page).to have_content('Add New category')
-      expect(page).to_not have_content("#{@category1.user_id}")
+      expect(page).to_not have_content(@category1.user_id.to_s)
     end
   end
 end
