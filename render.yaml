@@ -1,0 +1,23 @@
+databases:
+  - name: cash-crafter
+    databaseName: cash_crafter
+    user: cash_crafter_user
+    plan: free
+
+services:
+  - type: web
+    name: cash-crafter
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "./bin/rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "./bin/rails server"
+    envVars:
+      - key: postgres://cash_crafter_user:odPexbrRsdQkGtQbdukPsBwjzJVlluvh@dpg-cmplg4o21fec73cijl70-a/cash_crafter
+        fromDatabase:
+          name: cash-crafter
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
