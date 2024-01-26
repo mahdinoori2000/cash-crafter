@@ -54,6 +54,8 @@ group :development, :test do
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do
@@ -67,11 +69,10 @@ group :development do
   # gem "spring"
 end
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara'
-  gem 'selenium-webdriver'
-end
+# group :test do
+#   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  
+# end
 
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'jquery-rails'
