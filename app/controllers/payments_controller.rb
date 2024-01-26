@@ -4,8 +4,6 @@ class PaymentsController < ApplicationController
     @payments = @category.payments.order(created_at: :desc)
   end
 
-  def show; end
-
   def new
     @payment = Payment.new
     @categories = Category.where(user_id: current_user.id)
