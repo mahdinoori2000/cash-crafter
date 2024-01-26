@@ -51,10 +51,10 @@ gem 'bootsnap', require: false
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'capybara'
   gem 'debug', platforms: %i[mri windows]
   gem 'factory_bot_rails'
   gem 'rspec-rails'
-  gem 'capybara'
   gem 'selenium-webdriver'
 end
 
@@ -71,7 +71,7 @@ end
 
 # group :test do
 #   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  
+
 # end
 
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
