@@ -1,0 +1,9 @@
+<div class="signup-navbar d-flex align-items-center justify-content-between bg-primary bg-gradient">
+  <%= button_to "javascript:history.back()", method: :get, class: "sign-out-btn" do %>
+    <%= image_tag("back-icon.svg", alt: "Back", class: "sign-out-icon") %>
+  <% end %>
+  <h2 class="signup-nav-title text-white text-sm">REGISTER</h2>
+  <div class="actions">
+    <%= f.submit "Sign up", class: "signup-nav-signup-btn" %>
+  </div>
+</div>

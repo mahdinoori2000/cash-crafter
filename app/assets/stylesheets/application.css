@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-body {
-  color: red;
-  font-family: 'Dancing Script', cursive;
-}
+ body{ 
+  height: 100vh;
+  background-color: #eee;
+ }
