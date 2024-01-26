@@ -57,7 +57,7 @@
 
 ### Live <a name="live"></a>
 
-<a href='https://transaction-app-m02x.onrender.com/'>Click Here</a>
+<a href='https://cash-crafter.onrender.com/'>Click Here</a>
 <a href='https://drive.google.com/file/d/1tvt-dI-l5dmDdsR-owEwPreH-wXSWU7u/view?usp=sharing'>Video presentation</a>
 <!-- GETTING STARTED -->
 
