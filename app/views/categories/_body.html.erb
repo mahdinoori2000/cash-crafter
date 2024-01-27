@@ -1,0 +1,18 @@
+<div class="categories">
+  <% @categories.each_with_index do |cat, index|%>
+    <%= link_to category_payments_path(cat) do %>
+      <secion class="category card mb-3">
+          <div class="category-icon underline" style="font-size: 2.5em;">
+            <%= cat.icon %>
+          </div>
+          <div class="category-details">
+            <h5 class="category-card-title underline" style="color: gray;"><%= cat.name%></h5>
+            <p class="card-text text-left" style="color: gray;"><%= cat.created_at.strftime("%d %B %Y") %></p>
+          </div>
+          <div>
+            <strong style="color: gray;">$<%= cat.payments.sum(:amount) %></strong>
+          </div>
+      </secion>
+    <% end %>
+  <% end %>
+</div>

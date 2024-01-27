@@ -1,0 +1,19 @@
+<div class="transactions">
+  <% @payments.each do |payment|%>
+    <div class="ransaction card mb-3">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body text-dark">
+            <div class="d-flex justify-content-between">
+              <h5 class="card-title"><%= payment.name %></h5>
+              <strong>$<%= format("%.2f", payment.amount) %></strong>
+            </div>
+            <div>
+              <p class="card-text text-left"><%= payment.created_at.strftime('%d-%m-%Y') %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

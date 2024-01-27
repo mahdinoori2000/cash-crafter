@@ -1,0 +1,26 @@
+<section style="margin-top: -50px">
+  <div class="h-100">
+    <div class="row d-flex h-100">
+      <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+          <%= render "nav", f:f %>
+
+
+          <div class="field" style="margin-top: 5vh;">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: 'Enter your Email', class: "signup-field form-control form-control-lg" %>
+          </div>
+
+          <div class="">
+            <%= f.password_field :password, autocomplete: "current-password", placeholder: 'Enter your password', class: "signup-field form-control form-control-lg" %>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render "devise/shared/links" %>
