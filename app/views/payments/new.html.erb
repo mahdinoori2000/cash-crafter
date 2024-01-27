@@ -6,7 +6,7 @@
         <%= form_with model: @payment, url: create_payment_path, local: :true do |form| %> 
           
           <div class="d-flex align-items-center justify-content-between bg-primary bg-gradient" style="width: 100%; height: 3rem; margin-bottom: 50px;">
-          <%= link_to link_to "Back", payments_path, class: "btn btn-outline-primary text-white" %>
+          <%= link_to link_to "Back", category_payments_path, class: "btn btn-outline-primary text-white" %>
             <h2 class="text-white fs-6">New Transaction</h2>
 
             <div class="actions">
