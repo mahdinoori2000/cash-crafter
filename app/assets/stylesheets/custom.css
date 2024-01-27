@@ -35,7 +35,7 @@ body {
 }
 
 .categories {
-  margin-top: 10vh;
+  margin-top: 6vh;
 }
 
 .category {
@@ -43,7 +43,7 @@ body {
   padding: 7px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 

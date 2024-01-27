@@ -6,11 +6,11 @@
             <%= cat.icon %>
           </div>
           <div class="category-details">
-            <h5 class="category-card-title underline"><%= cat.name%></h5>
-            <p class="card-text text-left"><%= cat.created_at.strftime("%d %B %Y") %></p>
+            <h5 class="category-card-title underline" style="color: gray;"><%= cat.name%></h5>
+            <p class="card-text text-left" style="color: gray;"><%= cat.created_at.strftime("%d %B %Y") %></p>
           </div>
           <div>
-            <strong>$<%= cat.payments.sum(:amount) %></strong>
+            <strong style="color: gray;">$<%= cat.payments.sum(:amount) %></strong>
           </div>
       </secion>
     <% end %>
